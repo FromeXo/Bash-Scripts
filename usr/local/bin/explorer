@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Explorer
+#================================================================
+# DESCRIPTION
+# 	More or less just an alias for xdg-open.
+# 	But with the addition of a default location.
+#================================================================
+# @Author Robin Johansson <https://github.com/FromeXo>
+# @license GPL-3.0-or-later
+# @version 1.0.0
+#================================================================
+
+# Default location
+ARG="."
+
+# If user arg exists, use that instead of default location.
+if [ -n "${1}" ]; then
+	ARG="$1"
+fi
+
+xdg-open "${ARG}"
